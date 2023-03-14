@@ -1,0 +1,13 @@
+html {
+  font-size: 14px !important;
+}
+
+* {
+  margin: 0;
+}
+
+footer {
+  margin-top: auto;
+  border-top: 1px solid #606c38;
+  padding: 1.5rem;
+}
