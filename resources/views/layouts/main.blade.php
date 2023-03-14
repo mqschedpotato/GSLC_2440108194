@@ -24,7 +24,7 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <a class="button is-link is-rounded is-hovered is-size-7" href="{{ route('home') }}">
-                        Bingung naro apa di navbarnya
+                        Homepage
                     </a>
                 </div>
             </div>

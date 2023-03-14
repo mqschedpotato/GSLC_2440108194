@@ -2,17 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('index');
 })->name('home');
@@ -46,18 +35,18 @@ Route::get('/profile/{nama}', function ($nama) {
         ]
     ];
 
-    $activeData = array();
+    $inputData = array();
 
     foreach ($dataDiri as $value) {
         if ($value['nama'] == $nama) {
-            array_push($activeData, $value);
-            $activeData[0]['hobby'] = implode(' & ', $activeData[0]['hobby']);
-            $activeData[0]['matkul'] = implode(' & ', $activeData[0]['matkul']);
+            array_push($inputData, $value);
+            $inputData[0]['hobby'] = implode(' & ', $inputData[0]['hobby']);
+            $inputData[0]['matkul'] = implode(' & ', $inputData[0]['matkul']);
             break;
         }
     }
 
-    $activeData = (object)$activeData[0];
+    $inputData = (object)$inputData[0];
     // print_r($activeData);
-    return view('profile', ['data' => $activeData]);
+    return view('profile', ['data' => $inputData]);
 })->name('profile');
