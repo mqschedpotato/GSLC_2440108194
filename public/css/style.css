@@ -17,6 +17,10 @@ nav {
   border-bottom: 1px solid #606c38;
 }
 
+main {
+    color: white;
+}
+
 main > div {
   background-color: #506fff;
   border-radius: 2rem;
